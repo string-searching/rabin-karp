@@ -4,12 +4,25 @@
 Rabin-Karp algorithm for JavaScript.
 See [docs](https://string-searching.github.io/rabin-karp/index.html).
 
-> :building_construction: Caveat emptor! This is work in progress. Code may be
-> working. Documentation may be present. Coherence may be. Maybe.
-
 > :warning: Depending on your environment, the code may require
 > `regeneratorRuntime` to be defined, for instance by importing
 > [regenerator-runtime/runtime](https://www.npmjs.com/package/regenerator-runtime).
+
+```js
+import {rabinKarp} from '@string-searching/rabin-karp';
+
+const code = (c) => c.charCodeAt(0);
+const d = 256;
+const q = 13;
+const findAll = rabinKarp(code, d, q);
+
+const string = 'aaabaaa';
+const pattern = 'aa';
+
+for (const i of findAll(string, 0, string.length, pattern, 0, pattern.length)) {
+	// yields 0 1 4 5
+}
+```
 
 [![License](https://img.shields.io/github/license/string-searching/rabin-karp.svg)](https://raw.githubusercontent.com/string-searching/rabin-karp/main/LICENSE)
 [![Version](https://img.shields.io/npm/v/@string-searching/rabin-karp.svg)](https://www.npmjs.org/package/@string-searching/rabin-karp)
