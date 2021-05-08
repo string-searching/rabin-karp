@@ -1,5 +1,5 @@
 import assert from 'assert';
-import rabinKarpMatch from './rabinKarpMatch.js';
+import match from './match.js';
 
 /**
  * Note that q should be random and about m (log m bits) for best performance.
@@ -53,7 +53,7 @@ const rabinKarp = (code, d, q, one = 1) => {
 		const j = sj - m;
 		let i = si;
 		for (; i < j; ++i) {
-			if (rabinKarpMatch(sh, ph, m, s, i, p, pi)) yield i;
+			if (sh === ph && match(m, s, i, p, pi)) yield i;
 
 			sh -= ((code(s[i]) % q) * of) % q;
 			sh += q;
@@ -65,7 +65,7 @@ const rabinKarp = (code, d, q, one = 1) => {
 			console.debug({s: s[i + m], sh, ph, of});
 		}
 
-		if (rabinKarpMatch(sh, ph, m, s, i, p, pi)) yield i;
+		if (sh === ph && match(m, s, i, p, pi)) yield i;
 	};
 
 	return findAll;
