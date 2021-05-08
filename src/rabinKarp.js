@@ -36,7 +36,6 @@ const rabinKarp = (code, d, q, one = 1) => {
 		let ph = code(p[pi]) % q;
 		let of = one;
 
-		console.debug({s: s[si], p: p[pi], sh, ph, of});
 		for (let i = 1; i < m; ++i) {
 			sh *= d;
 			sh %= q;
@@ -48,7 +47,6 @@ const rabinKarp = (code, d, q, one = 1) => {
 			ph %= q;
 			of *= d;
 			of %= q;
-			console.debug({s: s[si + i], p: p[pi + i], sh, ph, of});
 		}
 
 		const j = sj - m;
@@ -63,7 +61,6 @@ const rabinKarp = (code, d, q, one = 1) => {
 			sh %= q;
 			sh += code(s[i + m]) % q;
 			sh %= q;
-			console.debug({s: s[i + m], sh, ph, of});
 		}
 
 		if (sh === ph && startsWith(p, pi, pj, s, i)) yield i;
