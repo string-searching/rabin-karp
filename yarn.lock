@@ -1344,6 +1344,11 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-4.0.1.tgz#d26729db850fa327b7cacc5522252194404226f5"
   integrity sha512-Qm9hBEBu18wt1PO2flE7LPb30BHMQt1eQgbV76YntdNk73XZGpn3izvGTYxbGgzXKgbCjiia0uxTd3aTNQrY/g==
 
+"@string-searching/brute-force@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@string-searching/brute-force/-/brute-force-0.0.1.tgz#d0c0f3b07abf88b73af48b05e0d7e8c3a990b8cf"
+  integrity sha512-EcQA4atJJ9YwMSG3DWSvnGSAUMVuby9WjJ+FoF7U4XYpsCu2qyS55IQso6F22wZk6ZwobmwXw3SuQwYUbdwgeQ==
+
 "@string-searching/specification@^0.0.1":
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/@string-searching/specification/-/specification-0.0.1.tgz#25d992d1c11b441bbf0b72dc0045a85bc39991f4"

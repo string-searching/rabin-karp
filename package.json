@@ -58,7 +58,9 @@
     "release": "np --message ':hatching_chick: release: Bumping to v%s.'",
     "test": "ava"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@string-searching/brute-force": "^0.0.1"
+  },
   "devDependencies": {
     "@babel/core": "7.14.0",
     "@babel/preset-env": "7.14.0",

@@ -1,8 +1,9 @@
 import assert from 'assert';
-import match from './match.js';
+import {startsWith} from '@string-searching/brute-force';
 
 /**
- * Note that q should be random and about m (log m bits) for best performance.
+ * Note that q should be random and about m (that is, log m bits) for best
+ * performance.
  * Make sure d * (q-1) <= Number.MAX_SAFE_INTEGER
  * and q + (q-1) <= Number.MAX_SAFE_INTEGER. Otherwise use bigints.
  *
@@ -53,7 +54,7 @@ const rabinKarp = (code, d, q, one = 1) => {
 		const j = sj - m;
 		let i = si;
 		for (; i < j; ++i) {
-			if (sh === ph && match(m, s, i, p, pi)) yield i;
+			if (sh === ph && startsWith(p, pi, pj, s, i)) yield i;
 
 			sh -= ((code(s[i]) % q) * of) % q;
 			sh += q;
@@ -65,7 +66,7 @@ const rabinKarp = (code, d, q, one = 1) => {
 			console.debug({s: s[i + m], sh, ph, of});
 		}
 
-		if (sh === ph && match(m, s, i, p, pi)) yield i;
+		if (sh === ph && startsWith(p, pi, pj, s, i)) yield i;
 	};
 
 	return findAll;
