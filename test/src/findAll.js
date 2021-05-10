@@ -6,9 +6,13 @@ import {rabinKarp} from '../../src/index.js';
 
 const code = (c) => c.charCodeAt(0);
 const d = 256;
-const q = 13;
-const _findAll = rabinKarp(code, d, q);
-const findAll = (...args) => _findAll(...args);
+const q13 = 13;
+const _findAll13 = rabinKarp(code, d, q13);
+const findAll13 = (...args) => _findAll13(...args);
+
+const q101 = 101;
+const _findAll101 = rabinKarp(code, d, q101);
+const findAll101 = (...args) => _findAll101(...args);
 
 const coden = (c) => BigInt(c.charCodeAt(0));
 const dn = 256n;
@@ -18,7 +22,7 @@ const findAlln = (...args) => _findAlln(...args);
 
 single({
 	test,
-	algorithms: [findAll, findAlln],
+	algorithms: [findAll13, findAll101, findAlln],
 	data,
 	skipEmptyString: true,
 	skipEmptyPattern: true,
