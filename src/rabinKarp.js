@@ -1,4 +1,4 @@
-import assert from 'node:assert';
+import assert from 'assert';
 import {startsWith} from '@string-searching/brute-force';
 
 /**
