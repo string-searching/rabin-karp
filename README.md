@@ -27,8 +27,7 @@ for (const i of findAll(string, 0, string.length, pattern, 0, pattern.length)) {
 [![License](https://img.shields.io/github/license/string-searching/rabin-karp.svg)](https://raw.githubusercontent.com/string-searching/rabin-karp/main/LICENSE)
 [![Version](https://img.shields.io/npm/v/@string-searching/rabin-karp.svg)](https://www.npmjs.org/package/@string-searching/rabin-karp)
 [![Tests](https://img.shields.io/github/workflow/status/string-searching/rabin-karp/ci:test?event=push&label=tests)](https://github.com/string-searching/rabin-karp/actions/workflows/ci:test.yml?query=branch:main)
-[![Dependencies](https://img.shields.io/david/string-searching/rabin-karp.svg)](https://david-dm.org/string-searching/rabin-karp)
-[![Dev dependencies](https://img.shields.io/david/dev/string-searching/rabin-karp.svg)](https://david-dm.org/string-searching/rabin-karp?type=dev)
+[![Dependencies](https://img.shields.io/librariesio/github/string-searching/rabin-karp.svg)](https://github.com/string-searching/rabin-karp/network/dependencies)
 [![GitHub issues](https://img.shields.io/github/issues/string-searching/rabin-karp.svg)](https://github.com/string-searching/rabin-karp/issues)
 [![Downloads](https://img.shields.io/npm/dm/@string-searching/rabin-karp.svg)](https://www.npmjs.org/package/@string-searching/rabin-karp)
 
