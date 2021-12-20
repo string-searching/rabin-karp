@@ -4,7 +4,7 @@ import {single, data} from '@string-searching/specification';
 
 import {rabinKarp} from '../../src/index.js';
 
-const code = (c) => c.charCodeAt(0);
+const code = (c) => c.codePointAt(0);
 const d = 256;
 const q13 = 13;
 const _findAll13 = rabinKarp(code, d, q13);
@@ -14,7 +14,7 @@ const q101 = 101;
 const _findAll101 = rabinKarp(code, d, q101);
 const findAll101 = (...args) => _findAll101(...args);
 
-const coden = (c) => BigInt(c.charCodeAt(0));
+const coden = (c) => BigInt(code(c));
 const dn = 256n;
 const qn = 13n;
 const _findAlln = rabinKarp(coden, dn, qn, 1n);
