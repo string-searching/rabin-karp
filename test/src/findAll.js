@@ -2,7 +2,7 @@ import test from 'ava';
 
 import {single, data} from '@string-searching/specification';
 
-import {rabinKarp} from '../../src/index.js';
+import {rabinKarp} from '#module';
 
 const code = (c) => c.codePointAt(0);
 const d = 256;
